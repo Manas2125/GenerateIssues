@@ -8,6 +8,7 @@ import { Login } from '../controllers/login.Controller.js';
 import { GetAdminUsers } from '../controllers/getAdminUser.Controller.js';
 import { GetIssueByAdmin } from '../controllers/getIssueByAdmin.Controller.js';
 import { GetEmployee } from '../controllers/getEmployee.Controller.js';
+import { DeleteEployee } from '../controllers/deleteEmployee.Controller.js';
 
 const router = express.Router();
 
@@ -18,5 +19,6 @@ router.get('/login', Login);
 router.get('/getAllUsersUnderAdmin', GetAdminUsers);
 router.get('/getEmployee', GetEmployee)
 router.get('/getIssueByAdmin', GetIssueByAdmin)
+router.delete('/deleteEmployee', DeleteEployee)
 
 export default router;

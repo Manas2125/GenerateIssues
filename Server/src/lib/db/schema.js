@@ -10,7 +10,7 @@ export const Employee = pgTable("Employee", {
     password: varchar("password", { length: 100 }).notNull(),
     image: text("image"),
     role: varchar("role", { length: 100 }).notNull().default("ASE"),
-    adminId: integer("adminId").references(() => Admin.id, { onDelete: "CASCADE" }), 
+    adminId: integer("adminId").references(() => Admin.id, { onDelete: "set null" }), 
     updatedAt: timestamp("updatedAt").default(sql`CURRENT_TIMESTAMP`).notNull(),
     createdAt: timestamp("createdAt").default(sql`CURRENT_TIMESTAMP`).notNull(),
 });
@@ -34,7 +34,7 @@ export const issue = pgTable("issue", {
     description: text("description").notNull(),
     status: varchar("status", { length: 100 }).default("Pending"),
     image: text("image"),
-    employeeId: integer("employeeId").notNull().references(() => Employee.id),
+    employeeId: integer("employeeId").notNull().references(() => Employee.id, {onDelete: "cascade"}),
     updatedAt: timestamp("updatedAt").default(sql`CURRENT_TIMESTAMP`).notNull(),
     createdAt: timestamp("createdAt").default(sql`CURRENT_TIMESTAMP`).notNull(),
 });
