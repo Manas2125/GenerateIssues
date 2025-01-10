@@ -1,8 +1,8 @@
 import fs from "fs";
-import { issue } from "../lib/db/schema.js";
-import { db } from "../lib/db/db.js";
+import { issue } from "../../lib/db/schema.js";
+import { db } from "../../lib/db/db.js";
 import path from "path";
-import cloudinary from "../config/cloudinary.js";
+import cloudinary from "../../config/cloudinary.js";
 
 export async function CreateIssue(req, res){
     const {title, description, employeeId} = req.body;

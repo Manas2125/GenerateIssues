@@ -1,7 +1,7 @@
-import { Employee, Admin } from "../lib/db/schema.js";
-import { db } from "../lib/db/db.js";
+import { Employee, Admin } from "../../lib/db/schema.js";
+import { db } from "../../lib/db/db.js";
 import path from "path";
-import cloudinary from "../config/cloudinary.js";
+import cloudinary from "../../config/cloudinary.js";
 import fs from "fs";
 import bcrypt from "bcryptjs";
 import { sql, eq } from "drizzle-orm";

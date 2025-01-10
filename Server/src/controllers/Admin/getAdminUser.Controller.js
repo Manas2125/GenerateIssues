@@ -1,6 +1,6 @@
 // all ther user who have same admin referance , get all of them
-import { db } from "../lib/db/db.js";
-import { Employee } from "../lib/db/schema.js";
+import { db } from "../../lib/db/db.js";
+import { Employee } from "../../lib/db/schema.js";
 import { eq } from "drizzle-orm";
 
 export async function GetAdminUsers(req, res){

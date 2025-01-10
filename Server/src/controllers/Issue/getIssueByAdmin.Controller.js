@@ -1,5 +1,5 @@
-import { db } from "../lib/db/db.js";
-import { Employee, Admin, issue } from "../lib/db/schema.js";
+import { db } from "../../lib/db/db.js";
+import { Employee, Admin, issue } from "../../lib/db/schema.js";
 import { sql, eq } from "drizzle-orm";
 
 export async function GetIssueByAdmin(req, res){

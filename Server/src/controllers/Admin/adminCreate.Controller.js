@@ -1,8 +1,8 @@
-import { Admin } from "../lib/db/schema.js";
-import { db } from "../lib/db/db.js";
+import { Admin } from "../../lib/db/schema.js";
+import { db } from "../../lib/db/db.js";
 import bcrypt from "bcryptjs";
 import path from "path";
-import cloudinary from "../config/cloudinary.js";
+import cloudinary from "../../config/cloudinary.js";
 import fs from "fs";
 
 export async function AdminCreate(req, res) {
