@@ -9,6 +9,8 @@ import { GetAdminUsers } from '../controllers/Admin/getAdminUser.Controller.js';
 import { GetIssueByAdmin } from '../controllers/Issue/getIssueByAdmin.Controller.js';
 import { GetEmployee } from '../controllers/Employee/getEmployee.Controller.js';
 import { DeleteEployee } from '../controllers/Employee/deleteEmployee.Controller.js';
+import { DeleteAdmin } from '../controllers/Admin/deleteAdmin.Controller.js';
+import { UpdateIssue } from '../controllers/Issue/updateIssue.Controller.js';
 
 const router = express.Router();
 
@@ -17,8 +19,10 @@ router.post('/adminCreate', upload.fields([{ name: "AdminImage", maxCount: 1 }])
 router.post('/createIssue', upload.fields([{ name: "IssueImage", maxCount: 1}]), CreateIssue);
 router.get('/login', Login);
 router.get('/getAllUsersUnderAdmin', GetAdminUsers);
-router.get('/getEmployee', GetEmployee)
-router.get('/getIssueByAdmin', GetIssueByAdmin)
-router.delete('/deleteEmployee', DeleteEployee)
+router.get('/getEmployee', GetEmployee);
+router.get('/getIssueByAdmin', GetIssueByAdmin);
+router.delete('/deleteEmployee', DeleteEployee);
+router.delete('/deleteAdmin', DeleteAdmin);
+router.update('/updateIssue', UpdateIssue);
 
 export default router;

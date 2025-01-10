@@ -6,6 +6,10 @@ export async function DeleteEployee(req, res){
     try {
         const { id } = req.body;
 
+        if(!id){
+            return res.status(400).json({message: "Id of Employee is required"})
+        }
+
         // Check user exist or not
         try {
             const employee = await db.select().from(Employee).where(eq(Employee.id, id)).limit(1);
