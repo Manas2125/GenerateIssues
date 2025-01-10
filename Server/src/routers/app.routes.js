@@ -7,8 +7,8 @@ import { CreateIssue } from '../controllers/issueCreate.Controller.js';
 import { Login } from '../controllers/login.Controller.js';
 import { GetAdminUsers } from '../controllers/getAdminUser.Controller.js';
 import { GetIssueByAdmin } from '../controllers/getIssueByAdmin.Controller.js';
-import { GetEmployee } from '../controllers/getEmployee.Controller.js';
-import { DeleteEployee } from '../controllers/deleteEmployee.Controller.js';
+import { GetEmployee } from '../controllers/Employee/getEmployee.Controller.js';
+import { DeleteEployee } from '../controllers/Employee/deleteEmployee.Controller.js';
 
 const router = express.Router();
 
