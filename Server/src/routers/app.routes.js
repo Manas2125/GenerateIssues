@@ -23,6 +23,6 @@ router.get('/getEmployee', GetEmployee);
 router.get('/getIssueByAdmin', GetIssueByAdmin);
 router.delete('/deleteEmployee', DeleteEployee);
 router.delete('/deleteAdmin', DeleteAdmin);
-router.update('/updateIssue', UpdateIssue);
+router.patch('/updateIssue', UpdateIssue);
 
 export default router;

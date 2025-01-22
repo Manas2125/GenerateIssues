@@ -11,7 +11,7 @@ async function authenticate(req, res, next) {
 
         const tokenParts = token.split(" ");
         if(tokenParts.length !== 2 || tokenParts[0] !== "Bearer"){
-            return res.status(401).json({ message: "Invali authorized problem" });
+            return res.status(401).json({ message: "Invalid authorized problem" });
         }
 
         const passedToken = tokenParts[1];

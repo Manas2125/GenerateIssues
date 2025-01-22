@@ -8,7 +8,7 @@ import { sql, eq } from "drizzle-orm";
 
 
 export async function UserCreate(req, res) {
-  const { fname, lname, email, password, role,adminId } = req.body;
+  const { fname, lname, email, password, role, adminId } = req.body;
   
   // console.log("This is Files " , req.files);
   const image = req.files?.EmployeeImage;
