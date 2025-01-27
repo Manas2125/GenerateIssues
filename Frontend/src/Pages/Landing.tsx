@@ -3,7 +3,7 @@ import { useUser } from '@clerk/clerk-react';
 import { useNavigate } from 'react-router-dom';
 import HeroSection from '../Components/HeroSection';
 
-function Home() {
+function Landing() {
   const navigate = useNavigate();
 
   const { isSignedIn, user } = useUser()
@@ -20,4 +20,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Landing

@@ -15,6 +15,14 @@ export const Employee = pgTable("Employee", {
     createdAt: timestamp("createdAt").default(sql`CURRENT_TIMESTAMP`).notNull(),
 });
 
+export const User = pgTable("User", {
+    id: serial("id").primaryKey(),
+    fname: varchar("fname", { length: 100 }).notNull(),
+    lname: varchar("lname", { length: 100 }).notNull(),
+    email: varchar("email", { length: 100 }).unique().notNull(),
+    password: varchar("password", { length: 100 }).notNull(),
+})
+
 export const Admin = pgTable("Admin", {
     id: serial("id").primaryKey(),
     fname: varchar("fname", { length: 100 }).notNull(),

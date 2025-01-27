@@ -23,7 +23,7 @@ function ImageSlider() {
     }
 
     useEffect(()=>{
-        const interval = setInterval(nextImage,1000);
+        const interval = setInterval(nextImage,3000);
         return ()=>clearInterval(interval);
     }, [])
 
