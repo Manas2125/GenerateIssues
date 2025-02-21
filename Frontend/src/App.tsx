@@ -6,11 +6,13 @@ import Landing from "./Pages/Landing.tsx";
 import Aboutus from "./Pages/Aboutus.tsx";
 import Login from "./Pages/Login.tsx";
 import User from "./Pages/User.tsx";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Router>
         <Navbar />
         <Routes>
@@ -20,7 +22,7 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
-    </>
+    </ div>
   );
 }
 

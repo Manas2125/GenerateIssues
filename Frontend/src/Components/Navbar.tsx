@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import './Navbar.scss';
 import { useClerk, useUser } from "@clerk/clerk-react";
 import { FaUser } from "react-icons/fa";
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Navbar() {
 
@@ -9,7 +10,7 @@ function Navbar() {
   const {isSignedIn, user} = useUser()
 
   return (
-    <div className="container">
+    <div className="container" >
         <div className="logo">
             <img className="logo-img" src="https://webkorps-app.s3.us-east-1.amazonaws.com/webkorps-logo.webp" alt="" />
         </div>
